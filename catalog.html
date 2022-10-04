@@ -6,7 +6,9 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo-img" src="img/logo.svg" width="140" height="70" alt='Логотип сервиса поиска гостиниц "Седона".'>
+      <a class="navigation-logo" href="index.html">
+        <img class="navigation-img" src="images/logo.svg" width="140" height="70" alt='Логотип сайта поиска гостиниц "Седона".'>
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -30,10 +32,8 @@
               <span class="visually-hidden">Избранное.</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="button navigation-link" href="#">Хочу сюда!</a>
-          </li>
         </ul>
+        <a class="button sign-link" href="#">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-inner">
@@ -112,20 +112,28 @@
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a class="button button-show-tile" href="#">
-          <span class="visually-hidden">Показать плитками.</span>
-        </a>
-        <a class="button button-show-slide" href="#">
-          <span class="visually-hidden">Показать слайдами.</span>
-        </a>
-        <a class="button button-show-list" href="#">
-          <span class="visually-hidden">Показать списком.</span>
-        </a>
+        <ul class="catalog-view-list">
+          <li class="catalog-view-item">
+            <a class="button button-show-tile" href="#">
+              <span class="visually-hidden">Показать плитками.</span>
+            </a>
+          </li>
+          <li class="catalog-view-item">
+            <a class="button button-show-slide" href="#">
+              <span class="visually-hidden">Показать слайдами.</span>
+            </a>
+          </li>
+          <li class="catalog-view-item">
+            <a class="button button-show-list" href="#">
+              <span class="visually-hidden">Показать списком.</span>
+            </a>
+          </li>
+        </ul>
         <ul class="product-list">
 <!--          Карточка-->
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="img/amara.jpg" alt="Гостиница Amara Resort & Spa">
+              <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Гостиница Amara Resort & Spa">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
               <p class="product-card-type">
                 Гостиница
@@ -155,7 +163,7 @@
           <!--          Карточка-->
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="img/villas.jpg" alt="Гостиница Villas at Poco Diablo">
+              <img class="product-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Гостиница Villas at Poco Diablo">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
               <p class="product-card-type">
                 Гостиница
@@ -185,7 +193,7 @@
           <!--          Карточка-->
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="img/desert.jpg" alt="Гостиница Desert Quail Inn">
+              <img class="product-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Гостиница Desert Quail Inn">
               <h3 class="product-card-title">Desert Quail Inn</h3>
               <p class="product-card-type">
                 Гостиница
@@ -212,7 +220,7 @@
           <!--          Карточка-->
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="img/greentree.jpg" alt="Гостиница GreenTree Inn">
+              <img class="product-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Гостиница GreenTree Inn">
               <h3 class="product-card-title">GreenTree Inn</h3>
               <p class="product-card-type">
                 Гостиница
@@ -289,7 +297,9 @@
           </li>
         </ul>
       </section>
-      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <address class="footer-contacts-address">
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
       <a class="footer-link" href="https://htmlacademy.ru">.html academy</a>
     </footer>
   </body>
