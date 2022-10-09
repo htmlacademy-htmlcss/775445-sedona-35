@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -49,8 +50,6 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-      </header>
-      <section class="catalog-products">
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -101,11 +100,13 @@
           </fieldset>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, &#8381;:</legend>
-<!--          Будем размечать позже-->
+            <!--          Будем размечать позже-->
           </fieldset>
           <button class="button button-apply" type="submit">Применить</button>
           <button class="button button-clear" type="reset">Сбросить</button>
         </form>
+      </header>
+      <section class="catalog-products">
         <p class="select-result">Найдено гостиниц: 38</p>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
@@ -114,19 +115,19 @@
         </select>
         <ul class="catalog-view-list">
           <li class="catalog-view-item">
-            <a class="button button-show-tile" href="#">
+            <button class="button-show-tile">
               <span class="visually-hidden">Показать плитками.</span>
-            </a>
+            </button>
           </li>
           <li class="catalog-view-item">
-            <a class="button button-show-slide" href="#">
+            <button class="button-show-slide">
               <span class="visually-hidden">Показать слайдами.</span>
-            </a>
+            </button>
           </li>
           <li class="catalog-view-item">
-            <a class="button button-show-list" href="#">
+            <button class="button-show-list">
               <span class="visually-hidden">Показать списком.</span>
-            </a>
+            </button>
           </li>
         </ul>
         <ul class="product-list">
@@ -245,7 +246,7 @@
 <!--        Пагинация-->
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="button pagination-link pagination-disabled" href="#">1</a>
+            <a class="button pagination-link pagination-current" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="button pagination-link" href="#">2</a>
@@ -257,16 +258,16 @@
             <a class="button pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="button pagination-link">...</a>
+            <span class="button pagination-ellipsis">...</span>
           </li>
           <li class="pagination-item">
             <a class="button pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
-      <section class="subscription">
+      <section class="subscription inner-subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-description inner-subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="email">
             <span class="visually-hidden">Введите e-mail.</span>
