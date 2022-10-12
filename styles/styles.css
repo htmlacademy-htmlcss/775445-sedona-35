@@ -14,7 +14,16 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -23,8 +32,89 @@ body {
   color: #000000;
 }
 
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.button-brown {
+  background-color: #756157;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button-find {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+.button-subscription {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+.button-rating {
+  background-color: #F2F2F2;
+  font-weight: 400;
+  color: #333333;
+}
+
+.button-pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+
+.button-pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-ellipsis {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  margin-right: 30px;
+}
+
 .navigation-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 440px;
+}
+
+.navigation-user {
+  width: 320px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -36,16 +126,8 @@ body {
   text-decoration: none;
 }
 
-.button {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #756157;
-  text-align: center;
-}
-
-.sign-link {
-  color: #FFFFFF;
+.main-container {
+  flex-grow: 1;
 }
 
 .welcome {
@@ -58,11 +140,19 @@ body {
   height: 485px;
 }
 
+.welcome-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.slogan {
+  text-align: center;
+}
+
 .slogan-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .slogan-description {
@@ -74,6 +164,21 @@ body {
 
 .advantages-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantage-item {
+  display: flex;
+}
+
+.advantage-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
 }
 
 .advantage-item:nth-child(1) {
@@ -136,49 +241,48 @@ body {
   font-weight: 400;
   text-align: center;
   color: #333333;
+  padding: 0 85px;
+}
+
+.find {
+  text-align: center;
+  padding: 0 304px;
 }
 
 .find-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .find-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
   color: #333333;
 }
 
 .subscription {
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   color: #FFFFFF;
   background-color: #000000;
   height: 414px;
+  text-align: center;
+  padding: 0 258px;
 }
 
 .subscription-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .subscription-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
-}
-
-.subscription-form {
-  text-align: center;
 }
 
 .footer-social-list {
@@ -242,14 +346,6 @@ body {
   line-height: 23px;
 }
 
-.button-apply {
-  background-color: #82B3D3;
-}
-
-.button-clear {
-  background-color: transparent;
-}
-
 .select-result {
   font-size: 30px;
   line-height: 36px;
@@ -293,22 +389,8 @@ body {
   font-weight: normal;
 }
 
-.product-button-favorite {
-  background-color: #82B3D3;
-}
-
 .product-rating-list {
   list-style-type: none;
-}
-
-.product-rating-current {
-  background-color: #F2F2F2;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #333333;
 }
 
 .pagination {
@@ -318,26 +400,6 @@ body {
 .pagination-item {
   width: 60px;
   height: 60px;
-}
-
-.pagination-link {
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82B3D3;
-  text-decoration: none;
-}
-
-.pagination-current {
-  background-color: #F2F2F2;
-  color: #000000;
-}
-
-.pagination-ellipsis {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
-  background-color: #FFFFFF;
 }
 
 .inner-subscription {
