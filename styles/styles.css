@@ -153,13 +153,11 @@ body {
 
 .welcome {
   background-image: url("../images/divider.svg"), url("../images/index-hero.jpg");
-  background-position: center bottom, center;
+  background-position: bottom, top;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
   color: #000000;
   background-color: #FFFFFF;
-  height: 485px;
-  padding-top: 51px;
+  padding: 51px 0 82px 0;
 }
 
 .welcome-logo {
