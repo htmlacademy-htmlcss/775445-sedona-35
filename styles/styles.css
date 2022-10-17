@@ -43,24 +43,12 @@ body {
   border-radius: 4px;
 }
 
-.button-brown {
-  background-color: #756157;
-  display: block;
-  padding: 8px 34px;
-}
-
 .button-blue {
   background-color: #82B3D3;
 }
 
 .button-green {
   background-color: #7DB54F;
-}
-
-.button-find {
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #756157;
 }
 
 .button-subscription {
@@ -109,6 +97,10 @@ body {
   z-index: 1;
 }
 
+.navigation-item {
+  z-index: 3;
+}
+
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -141,6 +133,14 @@ body {
   min-width: 20px;
   min-height: 20px;
   outline: tomato solid 1px;
+  padding: 20px 12px;
+}
+
+.navigation-user .button-login {
+  background-color: #756157;
+  display: block;
+  padding: 8px 34px;
+  margin-left: 20px;
 }
 
 .main-index {
@@ -216,7 +216,7 @@ body {
   font-weight: 400;
   text-align: center;
   color: #333333;
-  padding: 0 85px;
+  padding: 0 84px;
 }
 
 .advantage-item .advantage-title {
@@ -331,13 +331,14 @@ body {
 
 .find {
   text-align: center;
-  padding: 0 304px;
+  padding: 96px 304px 104px 304px;
 }
 
 .find-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 0 21px 0;
 }
 
 .find-description {
@@ -345,6 +346,15 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.find .button-find {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+  padding: 12px 50px 13px 50px;
 }
 
 .subscription {
@@ -353,21 +363,22 @@ body {
   background-size: cover;
   color: #FFFFFF;
   background-color: #000000;
-  height: 414px;
   text-align: center;
-  padding: 0 258px;
+  padding: 96px 258px 115px 258px;
 }
 
 .subscription-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 .subscription-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  margin: 0 0 54px 0;
 }
 
 .page-footer {
@@ -375,6 +386,7 @@ body {
   width: 1060px;
   margin: 0 auto;
   justify-content: space-between;
+  padding: 46px 70px 36px;
 }
 
 .footer-social {
@@ -384,6 +396,7 @@ body {
 .footer-social-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -391,6 +404,7 @@ body {
 .footer-social-item {
   width: 48px;
   height: 40px;
+  outline: tomato solid 1px;
 }
 
 .footer-social-link {
@@ -400,8 +414,8 @@ body {
 
 .footer-contacts-address {
   font-style: normal;
-  width: 350px;
-  text-align: center;
+  width: 500px;
+  margin-left: 114px;
 }
 
 .footer-phone {
@@ -414,6 +428,7 @@ body {
 
 .footer-link {
   width: 115px;
+  outline: tomato solid 1px;
 }
 
 /*Внутренняя страница*/
