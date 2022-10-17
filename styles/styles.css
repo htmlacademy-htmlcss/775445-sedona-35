@@ -51,12 +51,6 @@ body {
   background-color: #7DB54F;
 }
 
-.button-subscription {
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82B3D3;
-}
-
 .button-transparent {
   background-color: transparent;
 }
@@ -65,25 +59,6 @@ body {
   background-color: #F2F2F2;
   font-weight: 400;
   color: #333333;
-}
-
-.button-pagination-link {
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82B3D3;
-}
-
-.button-pagination-current {
-  background-color: #F2F2F2;
-  color: #000000;
-}
-
-.pagination-ellipsis {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
-  background-color: #FFFFFF;
 }
 
 .navigation {
@@ -381,6 +356,12 @@ body {
   margin: 0 0 54px 0;
 }
 
+.button-subscription {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
+}
+
 .page-footer {
   display: flex;
   width: 1060px;
@@ -433,26 +414,36 @@ body {
 
 /*Внутренняя страница*/
 
+.main-inner {
+  margin-top: -10px;
+}
+
 .inner-header {
   background-image: url("../images/catalog-hero.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   color: #FFFFFF;
   background-color: #000000;
   padding: 35px 70px 70px 70px;
+  margin-bottom: 50px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
-  margin: 0;
+  margin: 0 0 7px 0;
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 0;
+}
+
+.breadcrumbs-item {
+  outline: tomato solid 1px;
 }
 
 .breadcrumbs-link {
@@ -507,10 +498,15 @@ body {
   line-height: 23px;
 }
 
+.catalog-products {
+  padding-bottom: 59px;
+}
+
 .catalog-products-sort {
   display: flex;
+  align-items: center;
   width: 1060px;
-  margin: 0 auto;
+  margin: 0 auto 41px auto;
 }
 
 .select-control {
@@ -522,20 +518,33 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-right: 200px;
+  margin: 0 200px 0 0;
 }
 
 .catalog-view-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.catalog-view-item {
+  margin-left: 8px;
+}
+
+.catalog-view-item:first-child {
+  margin-left: 0;
+}
+
+.button-show {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
 }
 
 .product-list {
   width: 1060px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0 auto 80px auto;
   list-style-type: none;
   padding: 0;
 }
@@ -587,13 +596,40 @@ body {
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
   margin-right: 8px;
 }
 
 .pagination-item:last-child {
   margin-right: 0;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 12px 12px;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-decoration: none;
+  text-align: center;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-ellipsis {
+  background-color: transparent;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 38px;
 }
 
 .inner-subscription {
