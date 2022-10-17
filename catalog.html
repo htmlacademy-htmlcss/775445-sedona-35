@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button button-brown" href="#">Хочу сюда!</a>
+            <a class="button button-login" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -45,6 +45,7 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
+              Главная.
               <span class="visually-hidden">Главная.</span>
             </a>
           </li>
@@ -124,17 +125,17 @@
           </select>
           <ul class="catalog-view-list">
             <li class="catalog-view-item">
-              <button class="button-show-tile">
+              <button class="button-show button-show-current">
                 <span class="visually-hidden">Показать плитками.</span>
               </button>
             </li>
             <li class="catalog-view-item">
-              <button class="button-show-slide">
+              <button class="button-show">
                 <span class="visually-hidden">Показать слайдами.</span>
               </button>
             </li>
             <li class="catalog-view-item">
-              <button class="button-show-list">
+              <button class="button-show">
                 <span class="visually-hidden">Показать списком.</span>
               </button>
             </li>
@@ -256,28 +257,28 @@
 <!--        Пагинация-->
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="button button-pagination-link button-pagination-current" href="#">1</a>
+            <a class="pagination-link pagination-link-current" href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="button button-pagination-link" href="#">2</a>
+            <a class="pagination-link" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="button button-pagination-link" href="#">3</a>
+            <a class="pagination-link" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="button button-pagination-link" href="#">4</a>
+            <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <span class="button pagination-ellipsis">...</span>
+            <span class="pagination-link pagination-ellipsis">...</span>
           </li>
           <li class="pagination-item">
-            <a class="button button-pagination-link" href="#">10</a>
+            <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
       <section class="subscription inner-subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description inner-subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-description inner-subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="email">
             <span class="visually-hidden">Введите e-mail.</span>
@@ -311,7 +312,9 @@
       <address class="footer-contacts-address">
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
-      <a class="footer-link" href="https://htmlacademy.ru">.html academy</a>
+      <a class="footer-link" href="https://htmlacademy.ru">
+        <span class="visually-hidden">html academy</span>
+      </a>
     </footer>
   </body>
 </html>
