@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -41,24 +47,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   border-radius: 4px;
-}
-
-.button-blue {
-  background-color: #82B3D3;
-}
-
-.button-green {
-  background-color: #7DB54F;
-}
-
-.button-transparent {
-  background-color: transparent;
-}
-
-.button-rating {
-  background-color: #F2F2F2;
-  font-weight: 400;
-  color: #333333;
+  border: 0;
 }
 
 .navigation {
@@ -306,7 +295,7 @@ body {
 
 .find {
   text-align: center;
-  padding: 96px 304px 104px 304px;
+  padding: 96px 304px 105px 304px;
 }
 
 .find-title {
@@ -339,7 +328,8 @@ body {
   color: #FFFFFF;
   background-color: #000000;
   text-align: center;
-  padding: 96px 258px 115px 258px;
+  padding: 96px 258px 104px 258px;
+  margin: 0;
 }
 
 .subscription-title {
@@ -353,7 +343,11 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  margin: 0 0 54px 0;
+  margin: 0 0 55px 0;
+}
+
+.subscription-form {
+  padding-top: 14px;
 }
 
 .button-subscription {
@@ -367,7 +361,8 @@ body {
   width: 1060px;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 46px 70px 36px;
+  padding-top: 45px;
+  padding-bottom: 35px;
 }
 
 .footer-social {
@@ -455,35 +450,40 @@ body {
 }
 
 .catalog-filter {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
 }
 
 .catalog-filter-group {
+  margin: 0;
+  padding: 0;
   border: 0 none;
 }
 
-.catalog-filter-left {
-  display: flex;
-  width: 370px;
-  justify-content: space-between;
+.catalog-filter-infrastructure {
+  grid-column-start: 1;
 }
 
-.catalog-filter-right {
-  display: flex;
-  width: 549px;
-  justify-content: space-between;
+.catalog-filter-type {
+  grid-column-start: 3;
+}
+
+.catalog-filter-cost {
+  grid-column-start: 5;
+  outline: tomato solid 1px;
+  /*padding-bottom: 104px;*/
 }
 
 .filter-send-form {
-  display: flex;
-  flex-direction: column;
+  grid-column-start: 7;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
+  padding: 0;
 }
 
 .catalog-filter-list {
@@ -492,10 +492,38 @@ body {
   padding: 0;
 }
 
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .control {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+
+.control-input {
+  margin: 0 17px 0 0;
+  outline: tomato solid 1px;
+}
+
+.filter-send-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 191px;
+}
+
+.button-agree {
+  background-color: #82B3D3;
+  margin-bottom: 32px;
+  padding: 8px 8px;
+}
+
+.button-reset {
+  background-color: transparent;
+  padding: 8px 8px;
 }
 
 .catalog-products {
@@ -544,23 +572,44 @@ body {
 
 .product-list {
   width: 1060px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 40px auto;
+  padding: 0 0 40px 0;
   list-style-type: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 .product-card {
-  width: 340px;
+  display: grid;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  column-gap: 20px;
+  row-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
 }
 
+.product-card-image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.product-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .product-card-link {
   text-decoration: none;
   color: #000000;
+  grid-column: 1 /-1;
 }
 
 .product-card-title {
   font-size: 24px;
   line-height: 28px;
+  margin: 0 0 13px 0;
 }
 
 .product-card-type {
@@ -568,6 +617,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  margin: 0;
 }
 
 .product-card-prise {
@@ -576,14 +626,40 @@ body {
   line-height: 21px;
   text-align: right;
   color: #333333;
+  margin: 0;
 }
 
 .product-card-prise-mark {
   font-weight: normal;
 }
 
+.button-detailed {
+  background-color: #756157;
+  padding: 8px 3px;
+}
+
+.button-favorite {
+  background-color: #82B3D3;
+  padding: 8px 3px;
+}
+
 .product-rating-list {
   list-style-type: none;
+  outline: tomato solid 1px;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.button-rating {
+  background-color: #F2F2F2;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  padding: 8px 3px;
+}
+
+.button-green {
+  background-color: #7DB54F;
 }
 
 .pagination {
