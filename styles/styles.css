@@ -131,6 +131,7 @@ body {
 
 .navigation-icon {
   display: block;
+  color: #000000;
 }
 
 .navigation-link-text {
@@ -433,7 +434,7 @@ body {
   color: #FFFFFF;
   background-color: #000000;
   text-align: center;
-  padding: 96px 258px 104px 258px;
+  padding: 96px 104px 104px;
   margin: 0;
 }
 
@@ -452,13 +453,39 @@ body {
 }
 
 .subscription-form {
-  padding-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.subscription-field-label {
+  width: 100%;
+  max-width: 452px;
+}
+
+.subscription-field {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 14px 20px;
+  width: 100%;
+  color: #000000;
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscription-field::placeholder {
+  opacity: 0.6;
 }
 
 .button-subscription {
+  width: 100%;
+  max-width: 232px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
 }
 
 .page-footer {
@@ -466,6 +493,7 @@ body {
   width: 1060px;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
   padding-top: 45px;
   padding-bottom: 35px;
 }
@@ -482,21 +510,35 @@ body {
   padding: 0;
 }
 
-.footer-social-item {
-  width: 48px;
-  height: 40px;
-  outline: tomato solid 1px;
+.footer-social-icon {
+  color: #83B3D3;
+}
+
+.footer-social-icon:hover {
+  color: #68A2CA;
+}
+
+.footer-social-icon:focus {
+  color: #68A2CA;
+}
+
+.footer-social-icon:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-social-link {
   display: block;
-  padding: 12px 12px;
+  width: 47px;
+  height: 40px;
+  padding: 11px 11px;
+  text-align: center;
 }
 
 .footer-contacts-address {
+  display: flex;
+  justify-content: center;
+  margin-right: 55px;
   font-style: normal;
-  width: 500px;
-  margin-left: 114px;
 }
 
 .footer-phone {
@@ -507,16 +549,37 @@ body {
   text-decoration: none;
 }
 
-.footer-link {
+.footer-phone:hover {
+  color: #756157;
+}
+
+.footer-phone:focus {
+  color: #756157;
+}
+
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-link-icon {
   width: 115px;
-  outline: tomato solid 1px;
+  color: #000000;
+  display: block;
+}
+
+.footer-link-icon:hover {
+  color: #756157;
+}
+
+.footer-link-icon:focus {
+  color: #756157;
+}
+
+.footer-link-icon:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /*Внутренняя страница*/
-
-.main-inner {
-  margin-top: -10px;
-}
 
 .inner-header {
   background-image: url("../images/catalog-hero.jpg");
