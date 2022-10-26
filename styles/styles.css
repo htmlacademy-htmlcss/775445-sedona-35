@@ -600,13 +600,43 @@ body {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   list-style-type: none;
   margin: 0 0 40px 0;
   padding: 0;
 }
 
+.breadcrumbs-icon {
+  display: block;
+}
+
 .breadcrumbs-item {
-  outline: tomato solid 1px;
+  position: relative;
+  margin-right: 28px;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  top: 6px;
+  right: -18px;
+  width: 8px;
+  height: 11px;
+  content: "";
+  background-image: url("../images/arrow-left.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item:first-child::after {
+  top: 2px;
+  right: -18px;
+}
+
+.breadcrumbs-item:last-child::after {
+  background-image: none;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs-link {
@@ -650,7 +680,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   padding: 0;
 }
 
