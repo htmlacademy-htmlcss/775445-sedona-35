@@ -693,6 +693,7 @@ body {
 .catalog-filter {
   display: grid;
   grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
+  min-height: 160px;
 }
 
 .catalog-filter-group {
@@ -711,7 +712,6 @@ body {
 
 .catalog-filter-cost {
   grid-column-start: 5;
-  padding-bottom: 104px;
 }
 
 .filter-send-form {
@@ -744,6 +744,107 @@ body {
 
 .control-input {
   margin: 0 17px 0 0;
+}
+
+.range-inputs-list {
+  display: flex;
+  margin: 0 0 44px 0;
+  padding: 0;
+  list-style-type: none;
+  max-width: 288px;
+}
+
+.range-inputs-item {
+  position: relative;
+  margin: 0 2px 0 0;
+}
+
+.range-inputs-item:last-child {
+  margin-right: 0;
+}
+
+.range-field {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  padding: 12px 50px 12px 21px;
+  color: #000000;
+  background-color: #F2F2F2;
+  width: 143px;
+  border: none;
+  appearance: textfield;
+}
+
+.range-field::-webkit-outer-spin-button,
+.range-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-field-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-field-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-label {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  padding: 0;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -8px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus-visible {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  right: 0;
 }
 
 .filter-send-form {
@@ -866,7 +967,7 @@ body {
   border: 2px solid #000000;
 }
 
-.button-show:focus {
+.button-show:focus-visible {
   border: 2px solid #68A2CA;
 }
 
