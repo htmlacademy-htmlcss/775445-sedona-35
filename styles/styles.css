@@ -114,6 +114,7 @@ body {
   margin-right: 29px;
   width: 140px;
   z-index: 1;
+  flex-shrink: 0;
 }
 
 .navigation-img {
@@ -740,10 +741,71 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark{
+  position: absolute;
+  width: 20px;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  background: #FFFFFF;
+}
+
+.control-input[type="checkbox"] + .control-mark {
+  border-radius: 4px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
 }
 
 .control-input {
   margin: 0 17px 0 0;
+}
+
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label
+{
+  opacity: 0.1;
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  background-color: #3F5E72;
+  border-radius: 50%;
 }
 
 .range-inputs-list {
@@ -776,6 +838,10 @@ body {
   appearance: textfield;
 }
 
+.range-field:disabled {
+  opacity: 0.3;
+}
+
 .range-field::-webkit-outer-spin-button,
 .range-field::-webkit-inner-spin-button {
   appearance: none;
@@ -786,8 +852,24 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
+.range-field-min:focus-visible {
+  outline: 3px solid #83B3D3;
+}
+
+.range-field-min:active {
+  outline: 2px solid #000000;
+}
+
 .range-field-max {
   border-radius: 0 4px 4px 0;
+}
+
+.range-field-max:focus-visible {
+  outline: 3px solid #83B3D3;
+}
+
+.range-field-max:active {
+  outline: 2px solid #000000;
 }
 
 .range-label {
@@ -911,10 +993,41 @@ body {
   margin: 0 auto 40px auto;
 }
 
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 288px;
+  margin-right: auto;
+}
+
 .select-control {
   width: 100%;
-  max-width: 288px;
-  margin-right: auto;
+  padding: 11px 48px 11px 16px;
+  font: inherit;
+  font-weight: 400;
+  color: #333333;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url("../images/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68A2CA;
+  outline: none;
+}
+
+.select-control:active {
+  border: 2px solid #3F5E72;
+}
+
+.select-control:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .select-result {
@@ -981,12 +1094,13 @@ body {
 
 .product-list {
   width: 1060px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 38px auto;
   padding: 0 0 40px 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .product-card {
@@ -1152,13 +1266,25 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
-  line-height: 38px;
+  line-height: 36px;
+}
+
+.pagination-link:not(.pagination-link-current):not(.pagination-ellipsis):hover,
+.pagination-link:not(.pagination-link-current):not(.pagination-ellipsis):focus
+{
+  background: #68A2CA;
+}
+
+.pagination-link:not(.pagination-link-current):not(.pagination-ellipsis):active
+{
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .inner-subscription {
   background-image: none;
   color: #000000;
   background-color: #FFFFFF;
+  padding-top: 97px;
 }
 
 .inner-subscription-description {
