@@ -633,7 +633,7 @@ body {
   border-radius: 30px;
 }
 
-.modal-auth {
+.modal-search {
   width: 717px;
 }
 
@@ -654,6 +654,22 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.modal-close-button:disabled {
+  opacity: 0.1;
+}
+
 .modal-container-close {
   display: none;
 }
@@ -663,6 +679,68 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.field-group {
+  display: grid;
+  grid-template-columns: 137px 440px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.modal-form-label {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.modal-form-field {
+  margin: 0;
+  padding: 10px 50px 10px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  background-color: #F2F2F2;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.modal-form-field::placeholder {
+  opacity: 0.6;
+}
+
+.modal-form-field:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-form-field:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-form-field:active {
+  border: 2px solid #000000;
+}
+
+.modal-form-field:disabled {
+  opacity: 0.1;
+}
+
+.modal-message {
+  font-size: 16px;
+  font-weight: 400;
+  grid-column: 2 / -1;
+  padding: 5px 20px;
+  word-wrap: break-word;
+}
+
+.modal-message-error {
+  color: #FF5757;
 }
 
 /*Внутренняя страница*/

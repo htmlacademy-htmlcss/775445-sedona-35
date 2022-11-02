@@ -198,13 +198,37 @@
         </a>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-auth">
+<!--    <div class="modal-container modal-container-close">-->
+    <div class="modal-container">
+      <div class="modal modal-search">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть.</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="modal-form-label" for="arrival-date">Дата заезда:</label>
+              <input class="modal-form-field" id="arrival-date" type="text" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+              <span class="modal-message modal-message-error">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="field-group">
+              <label class="modal-form-label" for="departure-date">Дата выезда:</label>
+              <input class="modal-form-field" id="departure-date" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+              <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="modal-form-wrapper">
+              <div class="field-group">
+                <label class="modal-form-label" for="adults">Взрослые:</label>
+                <input class="modal-form-field" id="adults" type="number" name="adults" min="1" value="2" required>
+              </div>
+              <div class="field-group">
+                <label class="modal-form-label" for="kids">Дети:</label>
+                <input class="modal-form-field" id="kids" type="number" name="kids" min="0" value="2">
+              </div>
+            </div>
+            <button class="modal-form-submit button" type="submit">Найти</button>
+          </form>
         </section>
       </div>
     </div>
