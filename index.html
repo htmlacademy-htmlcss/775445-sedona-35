@@ -217,14 +217,36 @@
               <input class="modal-form-field" id="departure-date" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
               <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
             </div>
-            <div class="modal-form-wrapper">
-              <div class="field-group">
-                <label class="modal-form-label" for="adults">Взрослые:</label>
-                <input class="modal-form-field" id="adults" type="number" name="adults" min="1" value="2" required>
+            <div class="modal-form-quantity">
+              <label class="modal-form-label" for="adults">Взрослые:</label>
+              <div class="modal-form-field-wrapper">
+                <button class="modal-form-field-button modal-form-field-minus" type="button">
+                  <svg class="modal-form-field-icon" aria-hidden="true" focusable="false" fill="currentColor"
+                       xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M3.393 9v2h14V9h-14Z"/>
+                  </svg>
+                </button>
+                <input class="modal-form-field-count" id="adults" type="number" name="adults" min="1" value="2" readonly tabindex="-1">
+                <button class="modal-form-field-button modal-form-field-plus" type="button">
+                  <svg class="modal-form-field-icon" aria-hidden="true" focusable="false" fill="currentColor"
+                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/>
+                  </svg>
+                </button>
               </div>
-              <div class="field-group">
-                <label class="modal-form-label" for="kids">Дети:</label>
-                <input class="modal-form-field" id="kids" type="number" name="kids" min="0" value="2">
+            </div>
+            <div class="modal-form-quantity">
+              <label class="modal-form-label modal-form-label-kids" for="kids">Дети:</label>
+              <div class="modal-form-field-wrapper">
+                <button class="modal-form-field-button modal-form-field-minus" type="button">
+                  <svg class="modal-form-field-icon" aria-hidden="true" focusable="false" fill="currentColor"
+                       xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M3.393 9v2h14V9h-14Z"/>
+                  </svg>
+                </button>
+                <input class="modal-form-field-count" id="kids" type="number" name="kids" min="0" value="2" readonly tabindex="-1">
+                <button class="modal-form-field-button modal-form-field-plus" type="button">
+                  <svg class="modal-form-field-icon" aria-hidden="true" focusable="false" fill="currentColor"
+                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/>
+                  </svg>
+                </button>
               </div>
             </div>
             <button class="modal-form-submit button" type="submit">Найти</button>
