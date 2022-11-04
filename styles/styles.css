@@ -375,7 +375,7 @@ body {
   position: absolute;
   content: "";
   right: 0;
-  bottom: 88px;
+  top: 80px;
   left: 2px;
   margin: auto;
   width: 76px;
@@ -434,13 +434,14 @@ body {
   line-height: 26px;
   color: #333333;
   margin-top: 0;
-  margin-bottom: 53px;
+  margin-bottom: 45px;
 }
 
 .find .button-find {
   font-size: 20px;
   line-height: 36px;
   width: 376px;
+  margin-top: 8px;
 }
 
 .subscription {
@@ -502,6 +503,7 @@ body {
   line-height: 36px;
   background-color: #82B3D3;
   border-radius: 0 4px 4px 0;
+  word-wrap: break-word;
 }
 
 .button-subscription:hover {
@@ -924,7 +926,7 @@ body {
 }
 
 .breadcrumbs-icon {
-  display: block;
+  display: inline-block;
 }
 
 .breadcrumbs-item {
@@ -944,7 +946,6 @@ body {
 }
 
 .breadcrumbs-item:first-child::after {
-  top: 2px;
   right: -18px;
 }
 
@@ -990,18 +991,22 @@ body {
 
 .catalog-filter-infrastructure {
   grid-column-start: 1;
+  word-break: break-all;
 }
 
 .catalog-filter-type {
   grid-column-start: 3;
+  word-break: break-all;
 }
 
 .catalog-filter-cost {
   grid-column-start: 5;
+  word-break: break-all;
 }
 
 .filter-send-form {
   grid-column-start: 7;
+  word-break: break-all;
 }
 
 .catalog-filter-title {
@@ -1282,7 +1287,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  width: 288px;
+  min-width: 291px;
   margin-right: auto;
 }
 
@@ -1327,14 +1332,11 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-view-item {
   margin-left: 8px;
-}
-
-.catalog-view-item:first-child {
-  margin-left: 0;
 }
 
 .button-show {
@@ -1560,7 +1562,7 @@ body {
   display: block;
   box-sizing: border-box;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 12px 12px;
   border-radius: 4px;
   font-size: 20px;
@@ -1569,6 +1571,7 @@ body {
   background-color: #82B3D3;
   text-decoration: none;
   text-align: center;
+  word-break: break-all;
 }
 
 .pagination-link-current {
