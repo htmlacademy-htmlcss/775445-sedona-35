@@ -824,10 +824,58 @@ body {
   margin: 0;
 }
 
-.modal-form-label-kids {
+.modal-form-wrapper-kids {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+}
+
+.modal-form-wrapper-kids .modal-form-label {
   margin-left: 6px;
-  max-width: 85px;
-  padding: 1px 26px 1px 0;
+  margin-right: 11px;
+  max-width: 82px;
+}
+
+.tooltip {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-icon {
+  display: block;
+}
+
+.tooltip-text {
+  display: block;
+  position: absolute;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  background-color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  z-index: 3;
+  padding: 20px 22px 24px;
+  margin: 0;
+  width: 256px;
+  top: 41px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .modal-form-submit {
