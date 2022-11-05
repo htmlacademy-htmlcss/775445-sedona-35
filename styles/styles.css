@@ -154,6 +154,15 @@ body {
   padding-left: 12px;
 }
 
+.navigation-link:hover {
+  background-color: #F2F2F2;
+}
+
+.navigation-link:active,
+.navigation-link:active .navigation-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .navigation-current:before {
   content: "";
   position: absolute;
@@ -851,6 +860,10 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.tooltip:hover .tooltip-icon {
+  color: #000000;
 }
 
 .tooltip-wrapper {
@@ -1625,4 +1638,3 @@ body {
 .inner-subscription-description {
   color: #333333;
 }
-
