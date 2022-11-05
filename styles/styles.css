@@ -862,7 +862,7 @@ body {
 }
 
 .tooltip-text {
-  display: block;
+  display: none;
   position: absolute;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   color: #FFFFFF;
@@ -878,6 +878,22 @@ body {
   top: 41px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 13px;
+  height: 13px;
+  background-color: #333333;
+}
+
+.tooltip:hover + .tooltip-text,
+.tooltip:focus + .tooltip-text {
+  display: block;
 }
 
 .modal-form-submit {
