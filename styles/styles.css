@@ -1386,6 +1386,7 @@ body {
 
 .button-show:active {
   border: 2px solid #000000;
+  background-color: #DCDCDC;
 }
 
 .button-show-current {
