@@ -214,8 +214,8 @@ body {
 
 .welcome {
   padding: 51px 0 82px 0;
-  color: #000000;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #000000;
   background-image: url("../images/divider.svg"), url("../images/index-hero.jpg");
   background-position: bottom, top;
   background-repeat: no-repeat, no-repeat;
