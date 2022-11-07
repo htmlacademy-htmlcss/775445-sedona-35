@@ -78,6 +78,7 @@ html {
 body {
   height: 100%;
   margin: 0;
+  min-width: 1200px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -1311,6 +1312,7 @@ body {
   font-weight: 400;
   color: #333333;
   border: 2px solid #E5E5E5;
+  background-color: transparent;
   border-radius: 4px;
   background-image: url("../images/arrow-bottom.svg");
   background-repeat: no-repeat;
