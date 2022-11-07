@@ -1361,6 +1361,7 @@ body {
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: transparent;
   border: 2px solid #E5E5E5;
   outline: none;
   cursor: pointer;
