@@ -389,7 +389,7 @@ body {
   position: absolute;
   content: "";
   right: 0;
-  bottom: 89px;
+  top: 81px;
   left: 1px;
   margin: auto;
   width: 75px;
@@ -402,7 +402,7 @@ body {
   position: absolute;
   content: "";
   right: 0;
-  bottom: 86px;
+  top: 78px;
   left: 1px;
   margin: auto;
   width: 65px;
