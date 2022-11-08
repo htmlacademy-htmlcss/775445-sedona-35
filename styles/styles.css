@@ -216,8 +216,9 @@ body {
 .welcome {
   padding: 51px 0 82px 0;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #82B3D3;
   background-image: url("../images/divider.svg"), url("../images/index-hero.jpg");
+  background-size: auto, cover;
   background-position: bottom, top;
   background-repeat: no-repeat, no-repeat;
 }
@@ -442,7 +443,7 @@ body {
   padding: 96px 104px 104px;
   margin: 0;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #82B3D3;
   text-align: center;
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
@@ -918,7 +919,7 @@ body {
   padding: 35px 70px 70px 70px;
   margin-bottom: 50px;
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #82B3D3;
   background-image: url("../images/catalog-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -993,7 +994,7 @@ body {
 
 .catalog-filter {
   display: grid;
-  grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
+  grid-template-columns: 152px 1fr 150px 2fr 288px 1fr 191px;
   min-height: 160px;
 }
 
@@ -1293,7 +1294,7 @@ body {
 .catalog-products-sort {
   display: flex;
   align-items: center;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 36px auto;
   width: 1060px;
 }
 
@@ -1412,7 +1413,7 @@ body {
   column-gap: 20px;
   row-gap: 16px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: auto 36px 36px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -1450,6 +1451,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  word-break: break-all;
 }
 
 .product-card-prise {
@@ -1459,6 +1461,7 @@ body {
   line-height: 21px;
   text-align: right;
   color: #333333;
+  word-break: break-all;
 }
 
 .product-card-prise-mark {
